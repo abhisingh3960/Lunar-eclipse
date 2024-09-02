@@ -1,0 +1,79 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+}
+h1{
+    gap: 5px;
+}
+
+
+
+.Main-container {
+    width: 20rem;
+    height: 20rem;
+    background-color:#ffbb5c;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation:climate 10s linear infinite ;
+}
+
+.sun{
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    aspect-ratio: 1;
+    background-color:#e25e3e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.moon{
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    background-color: #000000;
+    animation: moonwalk 10s ease-in-out infinite;
+
+}
+
+@keyframes moonwalk{
+    0%{
+        translate: 100%;
+        scale: 1;
+    }
+    50%{
+        translate: 0%;
+        scale: 0.9;
+    }
+    100%{
+        translate: -100%;
+        scale: 0.9;
+    }
+}
+
+    @keyframes climate{
+        0%{
+            background-color: #ffbb5cb5;
+        }
+        25%{
+            background-color: #fcbf49;
+        }
+        50%{
+          background-color: #000000;
+        }
+        75%{
+            background-color: #fcbf49;
+        }
+        100%{
+           background-color: #ffbb5c; 
+        }
+
+}
